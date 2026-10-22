@@ -1,0 +1,22 @@
+export default {
+  "index": "AWS HealthOmics",
+  "_assets": "_assets",
+  "aws-healthomics": "AWS HealthOmics 소개 및 주요 링크",
+  "aws-healthomics-annotation": "AWS HealthOmics에서 Annotation 작업 수행하기",
+  "aws-healthomics-fastq-to-vcf-annotation": "AWS HealthOmics로 유전체 분석 (Fastq to VCF, Annotation) 자동화하기",
+  "aws-healthomics-nf-coresarek-390": "AWS HealthOmics에서 nf-core/sarek 3.9.0 실행하기",
+  "aws-healthomics-run-analyzer": "AWS HealthOmics Run Analyzer 분석 리포트",
+  "aws-healthomics-storage": "AWS HealthOmics - Storage",
+  "aws-healthomics-troubleshooting": "AWS HealthOmics - Troubleshooting",
+  "call-caching": "Call Caching",
+  "lessons-learned-warp-exomegermlinesinglesample-aws-healthomics": "Lessons Learned: WARP ExomeGermlineSingleSample → AWS HealthOmics 마이그레이션",
+  "nf-core-rnaseq": "Nf-core 워크플로우 마이그레이션 하기 (rnaseq)",
+  "nf-core-scrnaseq": "Nf-core 워크플로우 마이그레이션 하기 (scrnaseq)",
+  "nf-core-spatialvi": "Nf-core 워크플로우 마이그레이션 하기 (spatialvi)",
+  "run-analzyer": "Run Analzyer",
+  "running-nf-coresarek-390-on-aws-healthomics": "Running nf-core/sarek 3.9.0 on AWS HealthOmics",
+  "vpc-connected-workflows-accessing-the-internet-and-cross-region-s3-from-workflows": "VPC-Connected Workflows: Accessing the Internet and Cross-Region S3 from Workflows",
+  "vpc-connected-workflows-s3": "VPC-Connected Workflows: 워크플로우에서 인터넷과 크로스 리전 S3에 접근하기",
+  "wdl-hifi-human-wgs-wdl": "WDL 워크플로우 마이그레이션 하기 (HiFi-human-WGS-WDL)",
+  "몇-가지-기능과-알아둘-것들": "몇 가지 기능과 알아둘 것들"
+}
