@@ -42,7 +42,7 @@ AWS CloudFormation 을 사용하는 방법도 있습니다. [여기를 참고](h
 
 Application bundle은 `Custom` 을 선택합니다.
 
-<table id="bkmrk-option-configuration"><thead><tr><th>Option</th><th>Configuration</th></tr></thead><tbody><tr><td>Release</td><td>emr-7.1.0</td></tr><tr><td>Software</td><td>\*Hadoop, Hive, Spark, Livy and JupyterHub, JupyterEnterpriseGateway</td></tr><tr><td>Multi-master support</td><td>Leave as deafult</td></tr><tr><td>AWS Glue Data Catalog Settings</td><td>Select 1. Use for Hive table metadata, 2. Use for Spark table metadata</td></tr><tr><td>Amazon Linux Release</td><td>Leave as deafult</td></tr></tbody></table>
+OptionConfigurationReleaseemr-7.1.0Software\*Hadoop, Hive, Spark, Livy and JupyterHub, JupyterEnterpriseGatewayMulti-master supportLeave as deafultAWS Glue Data Catalog SettingsSelect 1. Use for Hive table metadata, 2. Use for Spark table metadataAmazon Linux ReleaseLeave as deafult
 
 ![Screenshot 2024-04-18 at 11.42.51 PM.png](_assets/f5e7c4bd71d8.png)
 
@@ -60,8 +60,11 @@ Cluster configuration 에서 Task 노드는 삭제합니다.
 
 Networking 설정에서 vpc는 앞에서 만들었던 hail-vpc에 해당하는 VPC ID 를 선택합니다.
 
-<p class="callout info">Stack을 이용해 Networking을 구성했다면 EMR-Dev-Exp-VPC 라는 이름의 VPC를 선택해야 할 수도 있습니다.  
-</p>
+
+> **ℹ️ 정보**
+>
+> Stack을 이용해 Networking을 구성했다면 EMR-Dev-Exp-VPC 라는 이름의 VPC를 선택해야 할 수도 있습니다.
+
 
 ![Screenshot 2024-04-18 at 11.47.46 PM.png](_assets/109a583ed578.png)
 
@@ -73,7 +76,7 @@ Subnet은 public 중에 선택합니다.
 
 ![screenshot-2024-04-19-at-9-32-13-am.png](_assets/ea715b0db12d.png)
 
-#### <span>Cluster termination and node replacement</span>
+#### Cluster termination and node replacement
 
 Cluster termination and node replacement &gt; Termination option에서 `Manually terminate cluster` 를 선택합니다.
 
@@ -85,7 +88,7 @@ Cluster termination and node replacement &gt; Termination option에서 `Manually
 
 ![Screenshot 2024-05-10 at 11.24.41 AM.png](_assets/9ff169b5abfd.png)
 
-#### <span>Security configuration and EC2 key pair</span>
+#### Security configuration and EC2 key pair
 
 보안 구성 및 EC2 키 쌍에서 키 쌍을 만들고 ssh용 .pem 키 파일을 저장합니다.
 
@@ -93,14 +96,17 @@ Cluster termination and node replacement &gt; Termination option에서 `Manually
 
 ![Screenshot 2024-04-18 at 11.53.19 PM.png](_assets/b2507bcf210a.png)
 
-#### <span>Identity and Access Management (IAM) roles</span>
+#### Identity and Access Management (IAM) roles
 
 ID 및 액세스 관리 역할에서 서비스 역할 및 인스턴스 프로필 만들기를 선택할 수도 있습니다.
 
 ![Screenshot 2024-05-10 at 11.26.08 AM.png](_assets/7577dc1f010f.png)
 
-<p class="callout info">Stack을 사용햇다면 아래처럼 기존에 존재하는 Role을 선택하고 EMRDevExp-EMRClusterServiceRole을 선택합니다. 마찬가지로 EC2 instance profile에 대해서도 스택에 의해 만들어져있는 EMRDevExp-EMR\_EC2\_Restricted\_Role을 선택합니다.  
-</p>
+
+> **ℹ️ 정보**
+>
+> Stack을 사용햇다면 아래처럼 기존에 존재하는 Role을 선택하고 EMRDevExp-EMRClusterServiceRole을 선택합니다. 마찬가지로 EC2 instance profile에 대해서도 스택에 의해 만들어져있는 EMRDevExp-EMR\_EC2\_Restricted\_Role을 선택합니다.
+
 
 ![Screenshot 2024-05-10 at 11.25.22 AM.png](_assets/4de791a36fb4.png)
 
@@ -189,6 +195,6 @@ py4j.protocol.Py4JJavaError: An error occurred while calling z:is.hail.backend.s
 
 ![Screenshot 2024-04-19 at 9.53.10 AM.png](_assets/a06dacd49eb8.png)
 
-export PATH=$PATH:/home/hadoop/.local/bin
+`export PATH=$PATH:/home/hadoop/.local/bin`
 
 ![Screenshot 2024-04-19 at 10.36.37 AM.png](_assets/a2affade0af5.png)

@@ -38,7 +38,7 @@ annotation data 도 마찬가지로 가져옵니다. 이 예에서는 59메가�
 
 [여기](https://github.com/aws-solutions-library-samples/guidance-for-multi-modal-data-analysis-with-aws-health-and-ml-services/tree/main/preprocess-multimodal-data)를 참고하면 아래의 수동 생성과정이 불필요할 수 있음.
 
-<div class="Box-sc-g0xbh4-0 fSWWem" id="bkmrk-provide-necessary-pe"><div class="Box-sc-g0xbh4-0 kPPmzM"><div class="Box-sc-g0xbh4-0 cIAPDV"><div class="Box-sc-g0xbh4-0 emFMJu"><div class="Box-sc-g0xbh4-0 hlUAHL"><div class="Box-sc-g0xbh4-0 iStsmI" data-selector="repos-split-pane-content" tabindex="0"><div class="Box-sc-g0xbh4-0 MERGN"><div class="Box-sc-g0xbh4-0 yfPnm"><div class="Box-sc-g0xbh4-0 faROye"><div class="Box-sc-g0xbh4-0 hcmQVs" id="bkmrk-provide-necessary-pe-1"><div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg"><span>Provide necessary permissions to the role</span>
+Provide necessary permissions to the role
 
 1. Get the execution role of your SageMaker domain. Click on the default user profile and note down the execution role on the right hand side of the page. The role will look like `arn:aws:iam::111122223333:role/service-role/AmazonSageMaker-ExecutionRole-XXXX`. Note down the `AmazonSageMaker-ExecutionRole-XXXX` part as it will be used in the next steps.
 2. Go to **Lake Formation** service page and choose **Administrative roles and tasks**.
@@ -47,10 +47,14 @@ annotation data 도 마찬가지로 가져옵니다. 이 예에서는 59메가�
 5. Click on **Add permissions** and **Attach policies**. Select **AmazonAthenaFullAccess** and **Add permissions**.
 6. Go back to the SageMaker domain in your SageMaker console. Under **User profiles**, click on **Launch** and select **Studio**. Wait for the Studio to launch.
 
-</article></div></div></div></div></div></div></div><div class="Box-sc-g0xbh4-0">  
-</div></div></div></div></div>##### 데이터베이스 생성 (AWS Lake Formation) 및 Workgroup 생성 (Amazon Athena)  
+  
+##### 데이터베이스 생성 (AWS Lake Formation) 및 Workgroup 생성 (Amazon Athena)  
 
-<p class="callout info">워크그룹 생성</p>
+
+> **ℹ️ 정보**
+>
+> 워크그룹 생성
+
 
 ![Screenshot 2024-01-30 at 5.39.53 PM.png](_assets/e8cd879830de.png)
 
@@ -60,7 +64,11 @@ omics라는 이름으로 workgroup을 생성합니다.
 
 Athena쿼리를 위해 Lake Formation에서 데이터베이스를 사전에 생성하여 리소스를 링크합니다.
 
-<p class="callout info">데이터베이스 생성</p>
+
+> **ℹ️ 정보**
+>
+> 데이터베이스 생성
+
 
 ![Screenshot 2024-01-30 at 5.00.42 PM.png](_assets/210518c6257b.png)
 
@@ -75,7 +83,11 @@ Athena쿼리를 위해 Lake Formation에서 데이터베이스를 사전에 생�
 
 ![Screenshot 2024-01-30 at 5.00.12 PM.png](_assets/9c075c91c022.png)
 
-<p class="callout info">리소스 연결</p>
+
+> **ℹ️ 정보**
+>
+> 리소스 연결
+
 
 앞에서 VCF 를 HealthOmics에 Import 정상적으로 했다면 AWS Lake Formation의 Tables 목록에서 확인할 수 있습니다.
 
@@ -135,4 +147,7 @@ AWSCodePipeline에 대한 Policy도 있어야 함.
 
 [preprocess-multimodal-data](https://github.com/aws-solutions-library-samples/guidance-for-multi-modal-data-analysis-with-aws-health-and-ml-services/tree/main/preprocess-multimodal-data) 폴더의 각 폴더별 지침/코드를 참고하여 진행해주세요.
 
-<p class="callout info">이때 SageMaker domain은 새로 생성할 필요 없이 [앞에서 만들었던 domain](/omics-on-aws/multi-modal-analysis/소개-및-실습-준비/)을 사용할 수 있습니다.</p>
+
+> **ℹ️ 정보**
+>
+> 이때 SageMaker domain은 새로 생성할 필요 없이 [앞에서 만들었던 domain](/omics-on-aws/multi-modal-analysis/소개-및-실습-준비/)을 사용할 수 있습니다.

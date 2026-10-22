@@ -30,7 +30,11 @@ c. 새 볼륨을 포맷하고 마운트합니다.
 
 **4. Create Volume** 페이지에서 볼륨의 필요한 크기(예: 데이터 세트 크기에 따라 10GB 이상)를 GB 단위로 입력합니다.
 
-<p class="callout warning">볼륨을 연결할 EC2 인스턴스의 **Availability Zone (AZ)** 을 확인하여 새로 추가하는 볼륨의 프로비저닝 할 AZ가 동일한지 확인하세요.</p>
+
+> **⚠️ 주의**
+>
+> 볼륨을 연결할 EC2 인스턴스의 **Availability Zone (AZ)** 을 확인하여 새로 추가하는 볼륨의 프로비저닝 할 AZ가 동일한지 확인하세요.
+
 
 ![Screenshot 2023-09-27 at 10.21.34 AM.png](_assets/c4178000c59a.png)
 
@@ -56,8 +60,11 @@ c. 새 볼륨을 포맷하고 마운트합니다.
 
 ![Screenshot 2024-05-09 at 9.50.18 AM.png](_assets/c88226101ce9.png)
 
-<p class="callout info">**중요**: 볼륨을 마운트하는 다음 단계를 위해 특정 장치 이름을 적어 두세요. 드라이브 이름은 표시된 것과 다를 수 있습니다. ([Device names on Linux instances](https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/device_naming.html))  
-</p>
+
+> **ℹ️ 정보**
+>
+> **중요**: 볼륨을 마운트하는 다음 단계를 위해 특정 장치 이름을 적어 두세요. 드라이브 이름은 표시된 것과 다를 수 있습니다. ([Device names on Linux instances](https://docs.aws.amazon.com/ko_kr/AWSEC2/latest/UserGuide/device_naming.html))
+
 
 > **NOTE**: Depending on the Linux version and the machine type, the device names may differ. The EC2 Console will generally show **/dev/sdX**, where X is a lower-case letter, but you may see **/dev/xvdX** or **/dev/nvmeYn1**.
 > 
@@ -81,7 +88,7 @@ lsblk
 
 **NOTE**: Depending on the Linux version and the machine type, the device names may differ. The EC2 Console will generally show **/dev/sdX**, where X is a lower-case letter, but you may see **/dev/xvdX** or **/dev/nvmeYn1**. The following table may help with translating. Another way to help track is to pick different sizes for your EBS volumes (such as 151, 152, 153 GB for different volumes).
 
-<table id="bkmrk-device-name-%28console"><thead><tr><th>Device name (Console)</th><th>Alternate 1</th><th>Alternate 2</th></tr></thead><tbody><tr><td>/dev/sda</td><td>/dev/xvda</td><td>/dev/nvme0n1</td></tr><tr><td>/dev/sdb</td><td>/dev/xvdb</td><td>/dev/nvme1n1</td></tr><tr><td>/dev/sdc</td><td>/dev/xvdc</td><td>/dev/nvme2n1</td></tr><tr><td>/dev/sdd</td><td>/dev/xvdd</td><td>/dev/nvme3n1</td></tr><tr><td>/dev/sde</td><td>/dev/xvde</td><td>/dev/nvme4n1</td></tr><tr><td>/dev/sdf</td><td>/dev/xvdf</td><td>/dev/nvme5n1</td></tr></tbody></table>
+Device name (Console)Alternate 1Alternate 2/dev/sda/dev/xvda/dev/nvme0n1/dev/sdb/dev/xvdb/dev/nvme1n1/dev/sdc/dev/xvdc/dev/nvme2n1/dev/sdd/dev/xvdd/dev/nvme3n1/dev/sde/dev/xvde/dev/nvme4n1/dev/sdf/dev/xvdf/dev/nvme5n1
 
 3\. 마운트되지 않은 파일 시스템 크기가 앞에서 추가한 볼륨의 스토리크기와 동일한지 확인합니다. 예를 들어 아래와 같이 "nvme1n1":
 
@@ -101,7 +108,11 @@ sudo file -s /dev/nvme1n1
 
 여기서 "nvme1n1"은 EC2 인스턴스에 장치를 연결한 후 이전 섹션에서 언급한 장치입니다.
 
-<p class="callout success">If the above command output shows "/dev/nvme1n1: data", it means your volume is empty.</p>
+
+> **✅ 참고**
+>
+> If the above command output shows "/dev/nvme1n1: data", it means your volume is empty.
+
 
 예)
 
@@ -113,7 +124,11 @@ sudo file -s /dev/nvme1n1
 sudo mkfs -t ext4 /dev/nvme1n1
 ```
 
-<p class="callout danger">참고: 이 파일 시스템 포맷 단계는 <span>**새로 추가한 신규 볼륨 즉, 새로운 장 에만 해당**</span>되며 그렇지 않을 경우는 기존 볼륨을 마운트하는 동안에는 장치의 모든 데이터가 지워지므로 **<span>이 단계를 실행하지 마세요</span>**.</p>
+
+> **🚫 경고**
+>
+> 참고: 이 파일 시스템 포맷 단계는 **새로 추가한 신규 볼륨 즉, 새로운 장 에만 해당**되며 그렇지 않을 경우는 기존 볼륨을 마운트하는 동안에는 장치의 모든 데이터가 지워지므로 **이 단계를 실행하지 마세요**.
+
 
 예)
 
@@ -138,7 +153,11 @@ cd /mnt/volume1
 df -h .
 ```
 
-<p class="callout info">위의 명령은 volume1 디렉터리의 여유 공간을 표시합니다.</p>
+
+> **ℹ️ 정보**
+>
+> 위의 명령은 volume1 디렉터리의 여유 공간을 표시합니다.
+
 
 9\. 이 시점에서 드라이브의 소유권은 사용자가 아닌 루트에 있습니다. 드라이브의 소유권을 변경해야 드라이브의 콘텐츠(파일 추가/제거 등)를 변경할 수 있습니다.
 
@@ -158,8 +177,11 @@ sudo chown -R ubuntu /mnt/volume1
 sudo umount /dev/nvme1n1
 ```
 
-<p class="callout warning">umount: /mnt/volume1: target is busy. 이런 메세지를 보았다면, 장치가 사용중입니다. 현재 디렉토리가 해당 볼륨의 위치에 있다면 다른 디렉토리로 변경하거나, 해당 볼륨 경로에 사용중인 (읽거나 쓰고 있는 등) 파일이 존재할 수 있습니다.  
-</p>
+
+> **⚠️ 주의**
+>
+> umount: /mnt/volume1: target is busy. 이런 메세지를 보았다면, 장치가 사용중입니다. 현재 디렉토리가 해당 볼륨의 위치에 있다면 다른 디렉토리로 변경하거나, 해당 볼륨 경로에 사용중인 (읽거나 쓰고 있는 등) 파일이 존재할 수 있습니다.
+
 
 하지만 나중에 이 장치가 필요하므로 다시 마운트하는 것을 잊지 마세요.
 

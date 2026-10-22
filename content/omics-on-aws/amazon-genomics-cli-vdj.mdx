@@ -127,8 +127,8 @@ agc context destroy myContext
 
 This will remove the cloud resources associated with the named context, but will keep any S3 outputs and CloudWatch logs. If you want stop using Amazon Genomics CLI in your AWS account entirely, you need to deactivate it:
 
-<div class="highlight" id="bkmrk--6"><div class="code-toolbar"><div class="toolbar">  
-</div></div></div>This will remove Amazon Genomics CLI’s core infrastructure. If Amazon Genomics CLI created a VPC as part of the activate process, it will be *removed*. If Amazon Genomics CLI created an S3 bucket for you, it will be *retained*.
+  
+This will remove Amazon Genomics CLI’s core infrastructure. If Amazon Genomics CLI created a VPC as part of the activate process, it will be *removed*. If Amazon Genomics CLI created an S3 bucket for you, it will be *retained*.
 
 To uninstall Amazon Genomics CLI from your local machine, run the following command
 
@@ -144,12 +144,12 @@ gatk-best-pratices-project/gatk4-germline-snps-indels 폴더의 워크플로우�
 
 ***Hint: 입력파일 및 Context를 먼저 확인해보세요.***
 
-<details id="bkmrk-%EC%A0%95%EB%8B%B5-cd-%7E%2Fenvironment%2F"><summary>정답</summary>
+
+**▸ 정답**
+
 
 cd ~/environment/amazon-genomics-cli/examples/gatk-best-practices-project/gatk4-germline-snps-indels
 
 agc context deploy -c onDemandCtx
 
 agc workflow run gatk4-germline-snps-indels --context onDemandCtx
-
-</details>

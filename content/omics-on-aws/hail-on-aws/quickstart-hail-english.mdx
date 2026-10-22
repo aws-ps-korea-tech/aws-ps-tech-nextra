@@ -149,7 +149,7 @@ Download VEP data using the wget command:
 wget ftp://ftp.ensembl.org/pub/release-112/variation/vep/homo_sapiens_vep_112_GRCh37.tar.gz
 ```
 
-Upload the downloaded file to your bucket: (<span>I emphasize that this is the value for the `BucketHail` key confirmed in CloudFormation Outputs</span>)
+Upload the downloaded file to your bucket: (I emphasize that this is the value for the `BucketHail` key confirmed in CloudFormation Outputs)
 
 ```bash
 aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{defined Hail S3 bucket}/vep/cache/
@@ -169,11 +169,11 @@ aws s3 cp homo_sapiens_vep_112_GRCh37.tar.gz s3://{defined Hail S3 bucket}/vep/c
 
 ![image.png](_assets/a00d8d483f81.png)
 
-<table id="bkmrk-hail_version-0.2.105"><thead><tr><th>HAIL\_VERSION</th><th>0.2.105</th></tr></thead><tbody><tr><td>HTSLIB\_VERSION</td><td>1.20</td></tr><tr><td>SAMTOOLS\_VERSION</td><td>1.20</td></tr></tbody></table>
+HAIL\_VERSION0.2.105HTSLIB\_VERSION1.20SAMTOOLS\_VERSION1.20
 
 \* For building with hail-vep option (includes VEP installation):
 
-<table id="bkmrk-hail_version-0.2.105-1"><thead><tr><th>HAIL\_VERSION</th><th>0.2.105</th></tr></thead><tbody><tr><td>HTSLIB\_VERSION</td><td>1.20</td></tr><tr><td>SAMTOOLS\_VERSION</td><td>1.20</td></tr><tr><td>VEP\_VERSION</td><td>107</td></tr><tr><td>**RODA\_BUCKET**</td><td>**value for the `BucketHail` key in CloudFormation Outputs** </td></tr></tbody></table>
+HAIL\_VERSION0.2.105HTSLIB\_VERSION1.20SAMTOOLS\_VERSION1.20VEP\_VERSION107**RODA\_BUCKET****value for the `BucketHail` key in CloudFormation Outputs** 
 
 ![image.png](_assets/65b5678c7832.png)
 
@@ -262,7 +262,11 @@ Input the Cluster name and Hail AMI ID. You can leave all other settings at thei
 
 ## numpy reinstall
 
-<p class="callout warning">The issue occurs when running as it is currently. **As of Mar 14, 2025**</p>
+
+> **⚠️ 주의**
+>
+> The issue occurs when running as it is currently. **As of Mar 14, 2025**
+
 
 Therefore, it is necessary to check the cluster created by Amazon EMR as shown below, connect to the Primary instance, delete and reinstall the numpy module.
 
@@ -362,7 +366,7 @@ For customizing Hail, VEP tool installation, and AMI building, refer to these re
 
 When working with large datasets, you may find the initially configured cluster volume capacity insufficient. You can dynamically expand the EBS volume by following the guidance in this blog post:
 
-<u><span lang="EN-US">[https://aws.amazon.com/ko/blogs/big-data/dynamically-scale-up-storage-on-amazon-emr-clusters/](https://aws.amazon.com/ko/blogs/big-data/dynamically-scale-up-storage-on-amazon-emr-clusters/)</span></u>
+<u>[https://aws.amazon.com/ko/blogs/big-data/dynamically-scale-up-storage-on-amazon-emr-clusters/](https://aws.amazon.com/ko/blogs/big-data/dynamically-scale-up-storage-on-amazon-emr-clusters/)</u>
 
 ## FAQ
 

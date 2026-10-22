@@ -54,9 +54,13 @@ c. EC2 인스턴스에 SSH로 접속하여 Linux 명령을 실행합니다.
 
 ![Screenshot 2023-10-07 at 12.03.29 AM.png](_assets/00951ff29f6a.png)
 
-**4. Application and OS images (Amazon Machine Image)** 아래에서 검색 상자에 교육용으로 공유된 AMI ID를 입력 또는 `CHENLAB`을 검색하여 선택합니다. **AMI**는 사진과 다를 수 있으므로 **강사의 안내를 참조**하세요. **특히 `N.Virginia` 리전이 아닌 `Seoul` 리전 등 다른 리전에서 실습할 경우 <span>강사에 의해 AMI가 사전에 공유</span>되어야지만 사용할 수 있습니다.**
+**4. Application and OS images (Amazon Machine Image)** 아래에서 검색 상자에 교육용으로 공유된 AMI ID를 입력 또는 `CHENLAB`을 검색하여 선택합니다. **AMI**는 사진과 다를 수 있으므로 **강사의 안내를 참조**하세요. **특히 `N.Virginia` 리전이 아닌 `Seoul` 리전 등 다른 리전에서 실습할 경우 강사에 의해 AMI가 사전에 공유되어야지만 사용할 수 있습니다.**
 
-<p class="callout info"> **참고로 AMI는 각 리전 별로 모두 AMI ID 가 다릅니다. 리전 간 AMI를 복사하는 방법은 [다음](https://repost.aws/ko/knowledge-center/copy-ami-region)을 참고하세요. [그외 (AMI 공유 방법 참고](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-explicit.html))**</p>
+
+> **ℹ️ 정보**
+>
+> **참고로 AMI는 각 리전 별로 모두 AMI ID 가 다릅니다. 리전 간 AMI를 복사하는 방법은 [다음](https://repost.aws/ko/knowledge-center/copy-ami-region)을 참고하세요. [그외 (AMI 공유 방법 참고](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/sharingamis-explicit.html))**
+
 
 **5. Community AMIs에서** 결과를 클릭합니다. 검색 결과는 **Community AMIs**에 표시됩니다.  **Select** 버튼을 클릭하여 AMI를 선택합니다. 최신 버전의 AMI를 선택해야 합니다.
 
@@ -74,8 +78,11 @@ c. EC2 인스턴스에 SSH로 접속하여 Linux 명령을 실행합니다.
 
 8\. 다음으로 **Network settings**에 대해 Edit을 클릭합니다. **Subnet** 및 **Security group** 세부 정보를 입력하라는 메시지가 표시됩니다. 보안 그룹은 방화벽 규칙이 됩니다. 앞 챕터에서 진행했다면 [만들어진 보안 그룹](/aws/aws-2/리눅스-머신-실행/)을 사용할 수도 있습니다.
 
-<p class="callout info">Network에서 VPC ID, 보안 그룹 아이디는 사용자마다 다르게 보입니다.  
-</p>
+
+> **ℹ️ 정보**
+>
+> Network에서 VPC ID, 보안 그룹 아이디는 사용자마다 다르게 보입니다.
+
 
 ![Screenshot 2023-10-07 at 12.10.00 AM.png](_assets/74f5ac1511c5.png)
 
@@ -85,14 +92,14 @@ c. EC2 인스턴스에 SSH로 접속하여 Linux 명령을 실행합니다.
 
 **10. Summary** 에서 구성을 검토하고 **Launch instance**를 클릭합니다.
 
-<table border="1" id="bkmrk-%EB%98%90%EB%8A%94-%28%EC%8B%A4%EC%8A%B5-%ED%99%98%EA%B2%BD%EC%9D%B4-us-east-1"><colgroup><col /></col><col /></col></colgroup><tbody><tr><td>![Screenshot 2024-05-09 at 9.33.45 AM.png](_assets/5d88de6c92ea.png)</td><td class="align-center">또는
+![Screenshot 2024-05-09 at 9.33.45 AM.png](_assets/5d88de6c92ea.png)또는
 
 (실습 환경이 us-east-1일 경우 보이는 AMI ID 다름)
 
 [  
 ![Screenshot 2023-10-07 at 12.15.06 AM.png](_assets/faba8110d149.png)](https://www.aws-ps-tech.kr/uploads/images/gallery/2023-10/screenshot-2023-10-07-at-12-15-06-am.png)
 
-</td></tr></tbody></table>
+
 
 이제 인스턴스가 시작되며 잠시 시간이 걸릴 수 있습니다. **Successfully initiated launch of instance** 메시지와 함께 **Launch Status** 페이지가 표시됩니다.
 
@@ -108,7 +115,11 @@ c. EC2 인스턴스에 SSH로 접속하여 Linux 명령을 실행합니다.
 
 ![Screenshot 2023-10-07 at 12.48.06 AM.png](_assets/b45cf740b2a1.png)
 
-<p class="callout warning">사전 제작된 `CHENLAB-PUBLIC` AMI는 우분투이므로 사용자 이름은 "**ubuntu**"가 됩니다. 참고로 이전 챕터에서 실습에 사용했던 Amazon Linux 2 이미지에 대한 사용자 이름은 "ec2-user" 였습니다.</p>
+
+> **⚠️ 주의**
+>
+> 사전 제작된 `CHENLAB-PUBLIC` AMI는 우분투이므로 사용자 이름은 "**ubuntu**"가 됩니다. 참고로 이전 챕터에서 실습에 사용했던 Amazon Linux 2 이미지에 대한 사용자 이름은 "ec2-user" 였습니다.
+
 
 ![Screenshot 2023-10-07 at 12.49.34 AM.png](_assets/cdb6e6273df8.png)
 
