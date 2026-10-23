@@ -46,11 +46,11 @@ cp -ax /tmp/fastq /tmp/outbreaks /mnt/volume1/
 
 **6. Actions** 버튼을 클릭한 다음 **Instance State**를 클릭하고 마지막으로 **Stop**를 클릭합니다.
 
-![Screenshot 2023-09-27 at 4.34.50 PM.png](_assets/58bffa36c3fe.png)
+![Screenshot 2023-09-27 at 4.34.50 PM.png](/_assets/58bffa36c3fe.png)
 
 7\. 대화 상자에서 Stop를 클릭하여 인스턴스 중지를 확인합니다.
 
-![Screenshot 2023-09-27 at 4.35.51 PM.png](_assets/2c3f118bc665.png)
+![Screenshot 2023-09-27 at 4.35.51 PM.png](/_assets/2c3f118bc665.png)
 
 8\. 이제 인스턴스가 중지를 시도하고 잠시 후 Instance State가 Stopped으로 변경됩니다. 창을 새로 고쳐야 할 수도 있습니다.
 
@@ -60,7 +60,7 @@ cp -ax /tmp/fastq /tmp/outbreaks /mnt/volume1/
 
 1\. 중지한 EC2 인스턴스를 선택하고, **Actions** 버튼을 클릭한 다음, **Image**를 클릭하고, **Create Image**을 클릭합니다.
 
-![Screenshot 2023-09-27 at 5.17.43 PM.png](_assets/e2baf64a86e2.png)
+![Screenshot 2023-09-27 at 5.17.43 PM.png](/_assets/e2baf64a86e2.png)
 
 2\. 이미지 생성 페이지에서 이미지 이름과 이미지 설명을 입력합니다**. "x" 버튼을 클릭하여 EC2 인스턴스에 연결한 추가 EBS 볼륨을 제거**해야 합니다(아래 이미지 처럼 1개만 남으면 됩니다). 이미지 생성을 클릭하여 이미지 생성 작업을 시작합니다.
 
@@ -70,7 +70,7 @@ cp -ax /tmp/fastq /tmp/outbreaks /mnt/volume1/
 > **여기서 추가되어 있는 EBS 볼륨을 삭제하는 이유 **기본 EBS에 필요한 연구용 Tool과 라이브러리가 설치될 것이고, 추가로 부착한 EBS에는 데이터만 저장되므로 이미지에 포함 시키지 않습니다
 
 
-![Screenshot 2023-09-27 at 5.19.05 PM.png](_assets/25291387a2a8.png)
+![Screenshot 2023-09-27 at 5.19.05 PM.png](/_assets/25291387a2a8.png)
 
 이미지 생성 작업이 백그라운드에서 시작되고 준비가 완료되면 EC2 대시보드 페이지 상단에 "성공적으로 생성됨 ..."이라는 메시지가 표시됩니다.
 
@@ -84,10 +84,10 @@ cp -ax /tmp/fastq /tmp/outbreaks /mnt/volume1/
 
 새 AMI가 생성 중이거나 이미 생성되어 사용자가 지정한 이름으로 사용할 준비가 된 것을 확인할 수 있습니다.
 
-![Screenshot 2023-09-27 at 6.03.26 PM.png](_assets/ec5c26c68b35.png)
+![Screenshot 2023-09-27 at 6.03.26 PM.png](/_assets/ec5c26c68b35.png)
 
 4\. 새 AMI 인스턴스를 선택하고 **Actions** 버튼을 클릭한 다음 **Manage Tags** 를 클릭합니다. 이전과 마찬가지로 이미지에 이름, 사용자 등 태그 기능을 사용해 리소스에 태깅할 수 있습니다.
 
-![Screenshot 2023-09-27 at 6.03.55 PM.png](_assets/9718fa7d10f2.png)
+![Screenshot 2023-09-27 at 6.03.55 PM.png](/_assets/9718fa7d10f2.png)
 
-![Screenshot 2023-09-27 at 6.04.24 PM.png](_assets/63b75000f9bd.png)
+![Screenshot 2023-09-27 at 6.04.24 PM.png](/_assets/63b75000f9bd.png)

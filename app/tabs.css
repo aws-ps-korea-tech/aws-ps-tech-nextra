@@ -1,0 +1,4 @@
+.ps-tabs { display: flex; gap: .25rem; margin-inline-start: 1rem; flex-wrap: nowrap; overflow-x: auto; }
+.ps-tabs a { padding: .35rem .7rem; border-radius: .4rem; font-size: .9rem; white-space: nowrap; color: inherit; opacity: .75; text-decoration: none; }
+.ps-tabs a:hover { opacity: 1; background: rgba(128, 128, 128, .15); }
+.ps-tabs a[aria-current='page'] { opacity: 1; font-weight: 600; box-shadow: inset 0 -2px 0 currentColor; border-radius: 0; }

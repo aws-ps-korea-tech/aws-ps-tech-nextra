@@ -1,25 +1,19 @@
-import { Footer, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head } from 'nextra/components'
-import { getPageMap } from 'nextra/page-map'
+import { Head } from 'nextra/components'
 import 'nextra-theme-docs/style.css'
+import './tabs.css'
 
-export const metadata = { title: { default: 'AWS PS Tech Docs', template: '%s | AWS PS Tech' } }
+const SITE = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aws-ps-tech-nextra.vercel.app'
 
-export default async function RootLayout({ children }) {
-  const navbar = <Navbar logo={<b>AWS PS Tech</b>} />
+export const metadata = {
+  metadataBase: new URL(SITE),
+  title: { default: 'AWS PS Tech Docs', template: '%s | AWS PS Tech' },
+}
+
+export default function RootLayout({ children }) {
   return (
     <html lang="ko" dir="ltr" suppressHydrationWarning>
       <Head />
-      <body>
-        <Layout
-          navbar={navbar}
-          pageMap={await getPageMap()}
-          docsRepositoryBase="https://github.com/aws-ps-korea-tech/nextra-ps-tech/tree/main"
-          footer={<Footer>AWS PS Tech Korea</Footer>}
-        >
-          {children}
-        </Layout>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

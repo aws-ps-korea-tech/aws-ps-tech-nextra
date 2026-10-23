@@ -24,7 +24,7 @@ c. 새 볼륨을 포맷하고 마운트합니다.
 
 2\. 왼쪽 탐색 표시줄에서 **Elastic Block Store** 아래의 **Volumes**을 클릭합니다.
 
-**![Screenshot 2023-09-27 at 10.19.25 AM.png](_assets/f6bef83967e1.png)**
+**![Screenshot 2023-09-27 at 10.19.25 AM.png](/_assets/f6bef83967e1.png)**
 
 **3. Create Volume** (오른쪽 상단 모서리)를 클릭하여 새 볼륨을 만듭니다.
 
@@ -36,9 +36,9 @@ c. 새 볼륨을 포맷하고 마운트합니다.
 > 볼륨을 연결할 EC2 인스턴스의 **Availability Zone (AZ)** 을 확인하여 새로 추가하는 볼륨의 프로비저닝 할 AZ가 동일한지 확인하세요.
 
 
-![Screenshot 2023-09-27 at 10.21.34 AM.png](_assets/c4178000c59a.png)
+![Screenshot 2023-09-27 at 10.21.34 AM.png](/_assets/c4178000c59a.png)
 
-![Screenshot 2023-09-27 at 10.22.23 AM.png](_assets/e97de08c83a6.png)
+![Screenshot 2023-09-27 at 10.22.23 AM.png](/_assets/e97de08c83a6.png)
 
 **5. Add Tag**를 클릭하여 리소스에 고유한 태그를 지정합니다. 키에 '이름'을 입력하고 값에 '\[your initials\]-EBS'를 입력합니다.
 
@@ -46,19 +46,19 @@ c. 새 볼륨을 포맷하고 마운트합니다.
 
 왼쪽 탐색 표시줄에서 Elastic Block Store 아래의 **Volumes**을 클릭하여 모든 볼륨을 확인합니다. 목록에서 이전 단계에서 제공된 고유 이름 태그를 검색하여 새로 생성한 볼륨을 선택할 수도 있습니다.
 
-![Screenshot 2023-09-27 at 10.24.55 AM.png](_assets/c8209dcfb784.png)
+![Screenshot 2023-09-27 at 10.24.55 AM.png](/_assets/c8209dcfb784.png)
 
 **1. Actions**을 클릭하고 **Attach Volume**을 추가로 클릭합니다.
 
 **2. Attach Volume** 대화 상자에서 인스턴스 필드를 클릭하고 목록에서 **Instance** ID 또는 이름 태그를 찾아 EC2 인스턴스를 선택합니다. **Attach**(연결)를 클릭하여 볼륨을 연결합니다.
 
-![Screenshot 2024-05-09 at 9.49.28 AM.png](_assets/1f2d24041566.png)성공적으로 연결된 경우 - 표시된 볼륨 목록에서 새 볼륨의 상태(상태 열 아래)가 **In Use**임을 나타내는 것을 볼 수 있습니다.
+![Screenshot 2024-05-09 at 9.49.28 AM.png](/_assets/1f2d24041566.png)성공적으로 연결된 경우 - 표시된 볼륨 목록에서 새 볼륨의 상태(상태 열 아래)가 **In Use**임을 나타내는 것을 볼 수 있습니다.
 
-![Screenshot 2023-09-27 at 10.26.22 AM.png](_assets/4507ddcf2975.png)
+![Screenshot 2023-09-27 at 10.26.22 AM.png](/_assets/4507ddcf2975.png)
 
 3\. 왼쪽 탐색 창에서 항목 목록 맨 위에 있는 EC2 Dashboard 를 클릭하여 해당 인스턴스에 볼륨이 잘 연결되었는지 확인해볼 수 있습니다.
 
-![Screenshot 2024-05-09 at 9.50.18 AM.png](_assets/c88226101ce9.png)
+![Screenshot 2024-05-09 at 9.50.18 AM.png](/_assets/c88226101ce9.png)
 
 
 > **ℹ️ 정보**
@@ -84,7 +84,7 @@ lsblk
 
 예)
 
-![Screenshot 2023-09-27 at 10.30.52 AM.png](_assets/e9bde970a5f1.png)
+![Screenshot 2023-09-27 at 10.30.52 AM.png](/_assets/e9bde970a5f1.png)
 
 **NOTE**: Depending on the Linux version and the machine type, the device names may differ. The EC2 Console will generally show **/dev/sdX**, where X is a lower-case letter, but you may see **/dev/xvdX** or **/dev/nvmeYn1**. The following table may help with translating. Another way to help track is to pick different sizes for your EBS volumes (such as 151, 152, 153 GB for different volumes).
 
@@ -116,7 +116,7 @@ sudo file -s /dev/nvme1n1
 
 예)
 
-![Screenshot 2023-09-27 at 10.30.43 AM.png](_assets/ff161b4ec21d.png)
+![Screenshot 2023-09-27 at 10.30.43 AM.png](/_assets/ff161b4ec21d.png)
 
 5\. 다음 명령을 사용하여 볼륨을 ext4 파일 시스템으로 포맷합니다. 실습이므로 새 장치입니다. 포멧이 되도 무방합니다.
 
@@ -132,7 +132,7 @@ sudo mkfs -t ext4 /dev/nvme1n1
 
 예)
 
-![Screenshot 2023-09-27 at 10.32.11 AM.png](_assets/ff58ce164c3b.png)
+![Screenshot 2023-09-27 at 10.32.11 AM.png](/_assets/ff58ce164c3b.png)
 
 6\. 새 ext4 볼륨을 마운트할 디렉터리를 원하는 대로 만듭니다. "volume1"이라는 이름을 사용하겠습니다.
 
@@ -167,9 +167,9 @@ sudo chown -R ubuntu /mnt/volume1
 
 예)
 
-![Screenshot 2023-09-27 at 10.33.16 AM.png](_assets/6fea377acccc.png)
+![Screenshot 2023-09-27 at 10.33.16 AM.png](/_assets/6fea377acccc.png)
 
-![Screenshot 2023-09-27 at 10.33.48 AM.png](_assets/38bac974d8de.png)
+![Screenshot 2023-09-27 at 10.33.48 AM.png](/_assets/38bac974d8de.png)
 
 10\. 참고로 나중에 이 장치를 제거할 수 있습니다. 마운트 해제 후 다시 마운트하는 연습을 해보세요. 볼륨을 마운트 해제하려면 다음 명령을 사용해야 합니다. 볼륨을 마운트 해제하려면 디렉터리 외부에 있어야 합니다.
 

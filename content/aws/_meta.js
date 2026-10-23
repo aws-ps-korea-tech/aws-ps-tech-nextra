@@ -1,6 +1,5 @@
 export default {
   "index": "대학 고객을 위한 AWS 길라잡이",
-  "_assets": "_assets",
   "aws-2": "aws-2",
   "aws-h9c": "aws-h9c",
   "ec2": "ec2",

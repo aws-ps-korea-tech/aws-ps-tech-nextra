@@ -38,13 +38,13 @@ title: "Nf-core 워크플로우 마이그레이션 하기 (spatialvi)"
 
 #### Specify instance type options
 
-![image.png](_assets/0806eb566b98.png)
+![image.png](/_assets/0806eb566b98.png)
 
 #### Generate key pairs
 
 If you don't already have a key pair then select create keypair
 
-![image.png](_assets/f604a15af6b1.png)
+![image.png](/_assets/f604a15af6b1.png)
 
 Give the key pair a name and select the key pair type and format.
 
@@ -52,13 +52,13 @@ Give the key pair a name and select the key pair type and format.
 
 Ensure that you have access to the instance via SSH.
 
-![image.png](_assets/73a8b3f0fde1.png)
+![image.png](/_assets/73a8b3f0fde1.png)
 
 #### Storage
 
 Create a root volume of 20GB
 
-![image.png](_assets/c264947c4bb3.png)
+![image.png](/_assets/c264947c4bb3.png)
 
 #### Instance Profile
 
@@ -70,27 +70,27 @@ Create a root volume of 20GB
 
 Advanced Details 토글
 
-![image.png](_assets/d6eda2029f3a.png)
+![image.png](/_assets/d6eda2029f3a.png)
 
 IAM Instance profile에서 Create new IAM profile 선택
 
-![image.png](_assets/d361de9c6d50.png)
+![image.png](/_assets/d361de9c6d50.png)
 
 **AWS service, EC2 선택**
 
-![image.png](_assets/8fbe849ab334.png)
+![image.png](/_assets/8fbe849ab334.png)
 
 **Add Permissions 화면에서 AdministratorAccess 추가(선택)**
 
-![image.png](_assets/4e21f7d14ac3.png)
+![image.png](/_assets/4e21f7d14ac3.png)
 
 새로운 role name을 지정 (여기서는 EC2adminAccess라고 작성했음)
 
-![image.png](_assets/be4fe7f9830f.png)
+![image.png](/_assets/be4fe7f9830f.png)
 
 **이제 EC2 instance 실행 화면으로 돌아가서 앞에서 만든 EC2adminAccess 선택**
 
-![image.png](_assets/69bca36191ed.png)
+![image.png](/_assets/69bca36191ed.png)
 
 #### User Data
 **맨 아래의 User data 섹션에 내용 추가**
@@ -116,18 +116,18 @@ npm install -g aws-cdk
 sudo yum -y install git
 ```
 
-![image.png](_assets/a1c206750432.png)
+![image.png](/_assets/a1c206750432.png)
 
 Launch instance 눌러서 인스턴스 실행
 
-![image.png](_assets/47d4c92006c6.png)
+![image.png](/_assets/47d4c92006c6.png)
 
 ### Step 2 - workflow migration code를 세팅하기
 **SSH 접속, 앞에서 만든 console로 접속합니다.**
 
-![image.png](_assets/c6754cc7eb7d.png)
+![image.png](/_assets/c6754cc7eb7d.png)
 
-![image.png](_assets/23dafcc76985.png)
+![image.png](/_assets/23dafcc76985.png)
 
 Use SSH to access the instance, you will need to ensure the key you created earlier is in the .ssh folder in your home directory and has the correct permissions(chmod 400). You will **need replace** ec2-user@10.11.12.123 with the IP address of your instance. This can be found in the EC2 management console.
 
@@ -212,7 +212,7 @@ cp  /home/workshop/amazon-ecr-helper-for-aws-healthomics/lib/lambda/parse-image-
 
 준비된 namespace.config파일의 내용은 다음과 같습니다.
 
-![image.png](_assets/243af52a4067.png)
+![image.png](/_assets/243af52a4067.png)
 
 This file will be used as one of the inputs for the `inspect_nf.py` script. This script parses the entire nextflow workflow project and identifies all public docker images across all the tools and generates a manifest which will be passed as an input to the migration tool.
 
@@ -232,7 +232,7 @@ python3 aws-healthomics-tutorials/utils/scripts/inspect_nf.py \
 
 `spatialvi_dev_docker_images_manifest.json` 파일은 예를들어 다음과 같은 모습이어야 합니다:
 
-![image.png](_assets/3e52d0589ae0.png)
+![image.png](/_assets/3e52d0589ae0.png)
 
 
 > **⚠️ 주의**
@@ -254,7 +254,7 @@ python3 aws-healthomics-tutorials/utils/scripts/inspect_nf.py \
 
 The omics.config output file is also generated, which needs to be added to the nextflow workflow project. The purpose of this config is to inform nextflow to use the ECR docker image locations instead of the ones specified in the nextflow project code. The omics.config should look like this:
 
-![image.png](_assets/ca2c07d7ad6c.png)
+![image.png](/_assets/ca2c07d7ad6c.png)
 
 `omics.config` 내용 중 process에 정의된 내용도 아래와 같이 변경합니다.
 
@@ -282,9 +282,9 @@ aws stepfunctions start-execution \
 
 [step function 콘솔](https://console.aws.amazon.com/states/home)에서 state machines중에 `omx-container-puller`를 확인하여 Execution이 완료되었는지 확인합니다.
 
-![Screenshot 2025-04-15 at 3.52.46 PM.png](_assets/8233abbf1258.png)
+![Screenshot 2025-04-15 at 3.52.46 PM.png](/_assets/8233abbf1258.png)
 
-![image.png](_assets/dca0664376de.png)
+![image.png](/_assets/dca0664376de.png)
 
 #### nf-core project 코드 업데이트
 

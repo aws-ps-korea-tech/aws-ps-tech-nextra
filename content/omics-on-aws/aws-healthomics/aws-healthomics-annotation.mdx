@@ -29,7 +29,7 @@ s3://omics-eventbridge-solutio-healthomicsckaoutput6642-xbtuwqnxt8uw/outputs/988
 4. For **Reference genome** select "GRCh38" (this is a pre-provisioned reference, but you can alternatively select the reference you imported in the [Reference Store](https://catalog.workshops.aws/amazon-omics-end-to-end/en-US/020-xp-console/100-omics-storage/reference-stores) part of the workshop)
 5. Finish with **Create variant store**
 
-![Screenshot 2024-06-14 at 10.45.15 PM.png](_assets/53c773355824.png)
+![Screenshot 2024-06-14 at 10.45.15 PM.png](/_assets/53c773355824.png)
 
 ### 변이스토어에 샘플 VCF 파일 가져오기
 
@@ -47,7 +47,7 @@ Next, you are going to start a VCF import job. To do this:
 s3://omics-eventbridge-solutio-healthomicsckaoutput6642-xbtuwqnxt8uw/outputs/9881593/out/output_vcf/NA12878.hg38.g.vcf.gz
 ```
 
-![Screenshot 2024-06-14 at 10.46.45 PM.png](_assets/c94f73b3558f.png)
+![Screenshot 2024-06-14 at 10.46.45 PM.png](/_assets/c94f73b3558f.png)
 
 **NOTE:** The region will differ based on deployment region.
 
@@ -59,11 +59,11 @@ You should now see something like this:
 
 \- 앞에서 설명한대로 입력하고자하는 VCF 파일의 S3 경로를 작성합니다.
 
-![Screenshot 2024-06-14 at 10.48.13 PM.png](_assets/1803f9f39043.png)
+![Screenshot 2024-06-14 at 10.48.13 PM.png](/_assets/1803f9f39043.png)
 
 콘솔에서 VCF Import작업시 제출되었음을 확인할 수 있습니다.
 
-![Screenshot 2024-06-14 at 10.49.27 PM.png](_assets/4eb57b608ff9.png)
+![Screenshot 2024-06-14 at 10.49.27 PM.png](/_assets/4eb57b608ff9.png)
 
 ## Annotation stores  
 
@@ -76,7 +76,7 @@ You should now see something like this:
 5. For **Reference genome** select "GRCh38" (this is a pre-provisioned reference, but you can alternatively select the reference you imported in the [Reference Store](https://catalog.workshops.aws/amazon-omics-end-to-end/en-US/020-xp-console/100-omics-storage/reference-stores) part of the workshop)
 6. Finish with **Create annotation store**
 
-![Screenshot 2024-06-14 at 10.51.05 PM.png](_assets/b391c0e41944.png)
+![Screenshot 2024-06-14 at 10.51.05 PM.png](/_assets/b391c0e41944.png)
 
 ### 주석 스토어에 VCF 파일 가져오기
 
@@ -99,7 +99,7 @@ s3://aws-genomics-static-<aws-region>/omics-workshop/data/annotations/clinvar.vc
 
 예: [https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf\_GRCh38/](https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh38/)
 
-<button aria-label="Copy content" class="CopyButton-module_styledButton__1Jq7M awsui_button_vjswe_1ivyw_105 awsui_variant-normal_vjswe_1ivyw_156 awsui_button-no-text_vjswe_1ivyw_1095" data-analytics-funnel-value="button:r2s:" data-analytics-performance-mark="8-1718373001716-6708" data-testid="copy-button" title="Copy content" type="submit"><svg aria-hidden="true" focusable="false" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="stroke-linejoin-round" d="M2 5h9v9H2z"></path><path class="stroke-linejoin-round" d="M5 5V2h9v9h-3"></path></svg></button>![Screenshot 2024-06-14 at 10.53.49 PM.png](_assets/1db8f2b29f1d.png)![Screenshot 2024-06-14 at 10.54.04 PM.png](_assets/e77d3723e02f.png)
+<button aria-label="Copy content" class="CopyButton-module_styledButton__1Jq7M awsui_button_vjswe_1ivyw_105 awsui_variant-normal_vjswe_1ivyw_156 awsui_button-no-text_vjswe_1ivyw_1095" data-analytics-funnel-value="button:r2s:" data-analytics-performance-mark="8-1718373001716-6708" data-testid="copy-button" title="Copy content" type="submit"><svg aria-hidden="true" focusable="false" viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path class="stroke-linejoin-round" d="M2 5h9v9H2z"></path><path class="stroke-linejoin-round" d="M5 5V2h9v9h-3"></path></svg></button>![Screenshot 2024-06-14 at 10.53.49 PM.png](/_assets/1db8f2b29f1d.png)![Screenshot 2024-06-14 at 10.54.04 PM.png](/_assets/e77d3723e02f.png)
 
 ## Querying variants and annotations  
 
@@ -109,7 +109,7 @@ s3://aws-genomics-static-<aws-region>/omics-workshop/data/annotations/clinvar.vc
 - Amazon Athena에서 작업 그룹을 생성하고 쿼리 편집기를 사용하여 변형 및 어노테이션 저장소에 대한 간단한 쿼리 실행하기
 - AWS SDK for Pandas (aka AWS Wrangler)를 사용해 SageMaker 노트북에서 변형 및 어노테이션 저장소에 대해 쿼리 실행하기
 
-![omics-analytics.png](_assets/a31d24705707.png)
+![omics-analytics.png](/_assets/a31d24705707.png)
 
 ### AWS Lake Formation 서비스 셋업  
 
@@ -121,7 +121,7 @@ For this workshop, you will need to verify that your current user role is a data
 
 2\. If you see the following screen, select **Get started**:
 
-![lakeformation__get-started.png](_assets/cba6a97ac78f.png)
+![lakeformation__get-started.png](/_assets/cba6a97ac78f.png)
 
 3\. From the navigation, go to **Administative roles and tasks**. Verify that `WSParticipantRole` is listed in the **Data lake administrators table**.
 
@@ -149,19 +149,19 @@ Resource links connect resources shared by HealthOmics Analytics to new or exist
 
 여기 예는 my\_variant\_store 입니다.
 
-![Screenshot 2024-06-14 at 11.02.20 PM.png](_assets/4ebcd87bb9dd.png)
+![Screenshot 2024-06-14 at 11.02.20 PM.png](/_assets/4ebcd87bb9dd.png)
 
 For **Resource link name**, provide **omicsvariants**.
 
 For **Database**, provide **omicsdb**.
 
-![Screenshot 2024-06-14 at 11.04.32 PM.png](_assets/64c992b658b1.png)
+![Screenshot 2024-06-14 at 11.04.32 PM.png](/_assets/64c992b658b1.png)
 
 주석 테이블에 대해 위의 단계를 반복하여 omicsdb 데이터베이스에 omicsannotations라는 리소스 링크를 만듭니다.
 
-![Screenshot 2024-06-14 at 11.05.25 PM.png](_assets/3723c26aaa6a.png)
+![Screenshot 2024-06-14 at 11.05.25 PM.png](/_assets/3723c26aaa6a.png)
 
-![Screenshot 2024-06-14 at 11.05.45 PM.png](_assets/f34968542a69.png)
+![Screenshot 2024-06-14 at 11.05.45 PM.png](/_assets/f34968542a69.png)
 
 ### Amazon Athena 셋업
 
@@ -172,7 +172,7 @@ For **Database**, provide **omicsdb**.
 3. In the Query editor, choose the **Settings** tab and then choose **Manage**.
 4. Click on **Browse S3**, select the bucket named **omics-output-\{REGION\}-\{ACCOUNT-ID\}**, and click **Choose**. This will fill the **Location of query result** with the S3 URI of the workshop output bucket. Append to this URI "/athena/" and select **Save**.
 
-![Screenshot 2024-06-14 at 11.07.15 PM.png](_assets/777b5d3008b8.png)
+![Screenshot 2024-06-14 at 11.07.15 PM.png](/_assets/777b5d3008b8.png)
 
 #### 워킹 그룹 생성
 
@@ -182,7 +182,7 @@ For **Database**, provide **omicsdb**.
 4. Select **Athena SQL** for the type of engine.
 5. Under **Upgrade query engine** select **Manual**.
 6. Under **Query Engine Version** select **Athena version 3**.
-7. Finish with **Create workgroup**![Screenshot 2024-06-14 at 11.07.56 PM.png](_assets/2d9e6d325eb3.png)
+7. Finish with **Create workgroup**![Screenshot 2024-06-14 at 11.07.56 PM.png](/_assets/2d9e6d325eb3.png)
 
 ### Running queries - Amazon Athena
 Now that we have Athena configured, let's run some queries.
@@ -204,7 +204,7 @@ SELECT * from omicsvariants limit 10
 
 Results should return in a few seconds and look like:
 
-![Screenshot 2024-06-14 at 11.09.08 PM.png](_assets/5fd532aaeb3d.png)
+![Screenshot 2024-06-14 at 11.09.08 PM.png](/_assets/5fd532aaeb3d.png)
 
 #### 복잡한 쿼리
 
@@ -232,7 +232,7 @@ INNER JOIN omicsannotations as clinvar ON
 
 ```
 
-![Screenshot 2024-06-14 at 11.27.02 PM.png](_assets/b9ba829b2304.png)
+![Screenshot 2024-06-14 at 11.27.02 PM.png](/_assets/b9ba829b2304.png)
 
 또다른 예 (본인의 상황에 맞게 수정해야할 것입니다.)
 
