@@ -1,0 +1,43 @@
+/* Brand settings carried over from the BookStack site (Amazon Ember + Noto Sans KR). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+  font-family: 'Amazon Ember';
+  src: url('https://m.media-amazon.com/images/S/sash/pDxWAF1pBB0dzGB.woff2') format('woff2');
+  font-display: swap;
+}
+
+:root {
+  --font-sans: 'Amazon Ember', 'Noto Sans KR', ui-sans-serif, system-ui, sans-serif;
+}
+body {
+  font-family: var(--font-sans);
+}
+
+.ps-disclaimer {
+  background: #fff3cd;
+  border-bottom: 1px solid #ffc107;
+  color: #664d03;
+  font-size: 13px;
+  padding: 8px 16px;
+  text-align: center;
+  line-height: 1.4;
+}
+.ps-disclaimer a {
+  color: #664d03;
+  text-decoration: underline;
+}
+html.dark .ps-disclaimer {
+  background: #3d3100;
+  border-bottom-color: #8a6d00;
+  color: #ffe69c;
+}
+html.dark .ps-disclaimer a {
+  color: #ffe69c;
+}
+
+.ps-logo-light { display: inline-block; }
+.ps-logo-dark { display: none; }
+html.dark .ps-logo-light { display: none; }
+html.dark .ps-logo-dark { display: inline-block; }
+.ps-brand { display: inline-flex; align-items: center; gap: 0.5rem; font-weight: 600; }
