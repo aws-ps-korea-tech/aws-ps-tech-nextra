@@ -37,7 +37,7 @@ export default async function DocsLayout({ children, params }) {
     <Layout
       navbar={navbar}
       pageMap={pageMap}
-      docsRepositoryBase="https://github.com/aws-ps-korea-tech/nextra-ps-tech/tree/main"
+      docsRepositoryBase="https://github.com/aws-ps-korea-tech/nextra/tree/main"
       footer={<Footer>AWS PS Tech Korea</Footer>}
     >
       {children}
