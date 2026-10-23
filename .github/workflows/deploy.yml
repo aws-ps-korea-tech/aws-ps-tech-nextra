@@ -14,7 +14,7 @@ jobs:
       - run: npm install
       - run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /nextra-ps-tech
+          NEXT_PUBLIC_BASE_PATH: /nextra
       - uses: actions/upload-pages-artifact@v3
         with: { path: ./out }
   deploy:
