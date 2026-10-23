@@ -1,6 +1,5 @@
 export default {
   "index": "AWS HealthOmics",
-  "_assets": "_assets",
   "aws-healthomics": "AWS HealthOmics 소개 및 주요 링크",
   "aws-healthomics-annotation": "AWS HealthOmics에서 Annotation 작업 수행하기",
   "aws-healthomics-fastq-to-vcf-annotation": "AWS HealthOmics로 유전체 분석 (Fastq to VCF, Annotation) 자동화하기",

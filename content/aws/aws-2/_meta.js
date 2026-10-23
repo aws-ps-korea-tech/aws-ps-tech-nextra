@@ -1,6 +1,5 @@
 export default {
   "index": "연구자를 위한 AWS 학습 기초",
-  "_assets": "_assets",
   "ami": "공유 AMI로부터 가상 머신 시작하기",
   "ami-gwl": "AMI로 쉽게 리눅스 머신 셋업하기",
   "aws-cli": "AWS CLI",

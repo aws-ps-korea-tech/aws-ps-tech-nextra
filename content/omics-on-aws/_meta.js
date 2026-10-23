@@ -1,6 +1,5 @@
 export default {
   "index": "Omics on AWS",
-  "_assets": "_assets",
   "alphagenome-alphamissense-on-aws": "alphagenome-alphamissense-on-aws",
   "aws-healthomics": "aws-healthomics",
   "hail-on-aws": "hail-on-aws",

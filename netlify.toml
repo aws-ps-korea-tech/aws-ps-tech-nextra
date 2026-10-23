@@ -1,0 +1,7 @@
+# Netlify: static export in out/. public/_redirects is copied into out/ and gives real 301s.
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
