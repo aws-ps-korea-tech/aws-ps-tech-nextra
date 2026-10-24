@@ -1,4 +1,4 @@
-# AWS PS Tech Docs — Nextra
+# AWS Korea Public Sector SA Team Docs — Nextra
 
 BookStack(`aws-ps-tech.kr`) 마이그레이션 비교용. Nextra 4 + Next static export, GitHub Pages 배포.
 
