@@ -46,7 +46,7 @@ export default async function DocsLayout({ children, params }) {
     <Layout
       navbar={navbar}
       pageMap={pageMap}
-      docsRepositoryBase="https://github.com/aws-ps-korea-tech/nextra/tree/main"
+      docsRepositoryBase="https://github.com/aws-ps-korea-tech/aws-ps-tech-nextra/tree/main"
       footer={
         <Footer>
           <span>

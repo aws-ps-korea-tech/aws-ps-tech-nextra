@@ -1,7 +1,7 @@
 import nextra from 'nextra'
 
 // basePath is platform-dependent:
-//   GitHub Pages serves under /nextra -> NEXT_PUBLIC_BASE_PATH=/nextra (set in CI)
+//   GitHub Pages serves under /aws-ps-tech-nextra -> NEXT_PUBLIC_BASE_PATH=/aws-ps-tech-nextra (set in CI)
 //   Vercel / Cloudflare Pages / Netlify serve at root -> leave it unset
 // Images live in public/_assets and are referenced as /_assets/..., so under a sub-path
 // the build prefixes them via assetPrefix.
