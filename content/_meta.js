@@ -4,6 +4,7 @@ export default {
   "s3": "Amazon S3",
   "data-transfer": "Data Transfer",
   "fsx-for-lustre": "FSx for Lustre",
+  "gxp-on-aws": "GxP on AWS",
   "omics-on-aws": "Omics on AWS",
   "genome-data-delivery-portal-on-aws": "Genome Data Delivery Portal on AWS",
   "amazon-bio-discovery-ai": "Amazon Bio Discovery로 AI 항체 설계 시작하기",
